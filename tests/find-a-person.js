@@ -5,16 +5,16 @@ var Map = require('./../src/map');
 describe('Find a person', function() {
   it('Given a person name, return all posts (of a map) containing her name (in any of a post fields)', function() {
     var map = new Map(["I met Or A. at Chabad house Bangkok", "We found Or A. R.I.P at Langtang valley", "Random post"]);
-    var posts = map.find_a_person("Ora A.")
+    var posts = map.find_a_person("Or A.")
     expect(posts).to.be.eql(["I met Or A. at Chabad house Bangkok", "We found Or A. R.I.P at Langtang valley"]);
      	
   });
-/*it('Given a missing person name, return empty posts list', function() {
+it('Given a missing person name, return empty posts list', function() {
     var map = new Map(["I met Or A. at Chabad house Bangkok", "We found Or A. R.I.P at Langtang valley", "Random post"]);
     var posts = map.find_a_person("Ora")
     expect(posts).to.be.eql([]);
      	
-  });*/
+  });
 });
 describe('Include location', function() {
   it('Given a person name, return true if there is location data about this person and false if not', function() {
