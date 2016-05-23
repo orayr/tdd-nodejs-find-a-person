@@ -34,7 +34,7 @@ Map.prototype.include_location = function(name)
 	    }
 	}
 	
-	return place;
+	return flag;
   };
 
 module.exports = Map;
