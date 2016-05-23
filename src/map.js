@@ -36,6 +36,25 @@ Map.prototype.include_location = function(name)
 	
 	return flag;
   };
+/*function check_dup(name){
+	var locations=[];
+	var places=["Chabad house Bangkok","Langtang valley"];
+	var flag="false";
+	for(i=0;i<this._posts.length;i++){
+            var n=this._posts[i].indexOf(name);
+	    if(n!=-1)
+	    {
+		for(j=0;j<places.length;j++)
+		{
+	            var l=this._posts[i].indexOf(places[j]);
+		    if(l!=-1)	
+			locations.push(places[j]);	
+		}	
+	    }
+	}
+	return locations.length == _.uniq(locations).length;
+}
+*/
 Map.prototype.map_inconsistencies=function(name) 
 {
 	var names=["Or A.","Ruth S."];
